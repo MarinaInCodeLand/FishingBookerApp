@@ -50,7 +50,7 @@
    pip install -r requirements.txt
    ```
 
-3. Run tests (e.g. `test_search.py`):
+3. Run tests (e. g. `test_search.py`):
 
    ```bash
    pytest test_cases/test_search.py
