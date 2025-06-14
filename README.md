@@ -1,7 +1,7 @@
 # 🐟 QA Project – FishingBooker (Manual & Automated Testing)
 
-**Author**: Marina Jakovljević
-**Date**: June 2025 
+**Author**: Marina Jakovljević  
+**Date**: June 2025  
 **Role**: Junior QA Engineer  
 **Tools**: Python, Selenium, PyTest, Chrome DevTools, Markdown  
 **Status**: In Progress  
