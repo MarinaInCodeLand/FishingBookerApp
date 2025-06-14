@@ -12,7 +12,7 @@
 ## 🌐 Website Under Test  
 [https://fishingbooker.com](https://fishingbooker.com)
 
-⚠️ This project is for educational purposes only and is based on publicly available parts of the site.
+> ⚠️ This project is for educational purposes only. It is based on publicly available pages of the FishingBooker website. 
 
 ---
 
@@ -71,4 +71,4 @@ The automation part of the project uses the Page Object Model (POM) design patte
 - Verify charter cards appear  
 - Check that prices are displayed  
 
-> ⚠️ This project is for educational purposes only. It is based on publicly available pages of the FishingBooker website. 
+
