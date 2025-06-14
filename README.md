@@ -40,6 +40,21 @@
 
 ---
 
+## Automated Testing (Selenium + POM)
+
+The automation part of the project uses the Page Object Model (POM) design pattern with Selenium WebDriver and PyTest.
+
+- `base_pages/` folder defines web pages as a Python class.  
+- `test_cases/` folder includes test scripts that use the page classes.  
+- Tests simulate real user flows like searching, User Logging, and clicking.
+
+### ✅ Sample Automated Test Scenario:
+- Search for a valid destination (e.g. “Belgrade”)  
+- Verify charter cards appear  
+- Check that prices are displayed  
+
+---
+
 ## How to Run Automated Tests
 
 1. Clone the repository
@@ -57,18 +72,3 @@
    ```
 
 ---
-
-## Automated Testing (Selenium + POM)
-
-The automation part of the project uses the Page Object Model (POM) design pattern with Selenium WebDriver and PyTest.
-
-- `base_pages/` folder defines web pages as a Python class.  
-- `test_cases/` folder includes test scripts that use the page classes.  
-- Tests simulate real user flows like searching, User Logging, and clicking.
-
-### ✅ Sample Automated Test Scenario:
-- Search for a valid destination (e.g. “Belgrade”)  
-- Verify charter cards appear  
-- Check that prices are displayed  
-
-
