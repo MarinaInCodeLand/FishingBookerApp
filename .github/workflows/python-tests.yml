@@ -1,4 +1,4 @@
-name: Run Python Selenium Tests
+name: Run Python Tests
 
 on: [push]
 
@@ -19,13 +19,17 @@ jobs:
     - name: Get Chrome version
       id: chrome-version
       run: |
-        CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+')
-        echo "CHROME_VERSION=$CHROME_VERSION" >> $GITHUB_ENV
+        FULL_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
+        MAJOR_VERSION=$(echo $FULL_VERSION | cut -d '.' -f1)
+        echo "CHROME_MAJOR_VERSION=$MAJOR_VERSION" >> $GITHUB_ENV
+        echo "Chrome full version: $FULL_VERSION"
+        echo "Chrome major version: $MAJOR_VERSION"
 
     - name: Install matching ChromeDriver
       run: |
-        CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION%.*})
-        echo "Installing ChromeDriver version: $CHROMEDRIVER_VERSION"
+        echo "Installing ChromeDriver for Chrome major version: $CHROME_MAJOR_VERSION"
+        CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR_VERSION)
+        echo "ChromeDriver version to install: $CHROMEDRIVER_VERSION"
         wget -N https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
         unzip -o chromedriver_linux64.zip
         sudo mv -f chromedriver /usr/local/bin/chromedriver
@@ -42,12 +46,8 @@ jobs:
         pip install -r requirements.txt
         pip install pytest pytest-html selenium
 
-    - name: Check Chrome and ChromeDriver versions
-      run: |
-        google-chrome --version
-        chromedriver --version
-
     - name: Run tests
       run: |
         pytest test_cases --html=report.html
+
 
