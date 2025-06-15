@@ -18,8 +18,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y wget unzip
-          wget -q -O google-chrome-stable_current_amd64.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.133-1_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
+          sudo apt-get install -y google-chrome-stable=114.0.5735.133-1
 
       - name: Verify Chrome install
         run: |
@@ -33,4 +32,5 @@ jobs:
 
       - name: Run tests
         run: pytest test_cases --html=report.html
+
 
