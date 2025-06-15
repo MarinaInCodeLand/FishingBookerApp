@@ -4,7 +4,6 @@
 
 This document contains a list of manually written test cases for the FishingBooker website as part of a junior QA job application. 
 
-- Written in Markdown format  
 - Focused on core website features (search, filters, booking, responsive design)   
 
 ## Website  
@@ -34,8 +33,8 @@ These test cases cover the basic functionalities of the FishingBooker website fo
 
 | Test Case ID | Test Name                      | Steps                                                                     | Expected Result                                | Status |
 |--------------|--------------------------------|--------------------------------------------------------------|------------------------------------------------------------------|--------|
-| TC001        | Search Valid Destination       | 1. Go to https://fishingbooker.com<br>2. In search input enter "Miami"<br>3. Click the search button         | List of boats in Miami appears with relevant offers             | Pass   |
-| TC002        | Search Invalid Destination       | 1. Go to https://fishingbooker.com<br>2. Enter random string "asdfgh123"<br>3. Click the search button         | "No results found" message is shown or no listings displayed               | Pass   |
+| TC001        | Search Valid Destination       | 1. Go to https://fishingbooker.com<br>2. In search input enter "Belgrade"<br>3. Click the search button         | List of boats in Belgrade appears with relevant offers             | Pass   |
+| TC002        | Search Invalid Destination       | 1. Go to https://fishingbooker.com<br>2. In search input enter random string "asdfgh123"<br>3. Click the search button         | "No results found" message is shown or no listings displayed               | Pass   |
 | TC003        | Search With Empty Field        | 1. Go to homepage<br>2. Leave the search input empty<br>3. Click the search button              | Error message or nothing happens, user stays on same page       | Pass   |
 | TC004        | Click on Top Destination Card   | 1. Go to homepage<br>2. Scroll down to "Exciting fishing destinations close to you" <br>3. Click on a destination card (e.g. "Belgrade")                 | Destination details page opens with available charters            | Pass   |
 | TC005        | Search with Date & Passengers (Unauthenticated User)| 1. Open the FishingBooker homepage.<br>2. In the destination field, type and select “Croatia.”<br>3. Set the date to June 18.<br>4. Set the number of people to 2 adults.<br>5. Click on "Check availability".| A list of available charters is displayed, and the total number of results (e.g., 62 available charters) is shown. | Pass   |
@@ -70,6 +69,7 @@ These test cases cover the basic functionalities of the FishingBooker website fo
 | TC010 | Login with Invalid Email      | Important for security and input validation.                    |
 | TC011 | Sign Up with Empty Fields     | Same – validation and security.                                 |
 | TC008 | Verify Reservation Form Opens | Key step for a successful reservation.                          |
+| TC018 | Contact Support               | Important for user experience.                                  |
 
 ---
 
@@ -94,7 +94,6 @@ These test cases cover the basic functionalities of the FishingBooker website fo
 | ----- | ------------------------ |
 | TC016 | Check Footer Links       |
 | TC017 | Check Social Media Icons |
-| TC018 | Contact Support          |
 
 ---
 
