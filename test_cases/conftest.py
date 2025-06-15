@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture()
 def setup():
     options = Options()
+    options.binary_location = "/opt/google/chrome/google-chrome"
     options.add_argument('--headless')  # neophodno za GitHub
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
