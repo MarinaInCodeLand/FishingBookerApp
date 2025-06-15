@@ -11,11 +11,11 @@ def setup():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    # koristi tačnu verziju ChromeDriver-a koja je instalirana u GitHub Actions
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager(version="116.0.5845.96").install()),
         options=chrome_options
     )
+
     driver.maximize_window()
     yield driver
     driver.quit()
