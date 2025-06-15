@@ -4,3 +4,4 @@ pytest-xdist==3.6.1       # to run tests in parallel
 openpyxl==3.1.2           # for working with Excel files
 allure-pytest==2.13.2     # to generate Allure reports
 webdriver-manager==3.8.6  # automatically manages browser drivers
+pytest-html
