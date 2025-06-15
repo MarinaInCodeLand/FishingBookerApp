@@ -21,4 +21,5 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest --html=report.html
+        pytest test_cases --html=report.html
+
