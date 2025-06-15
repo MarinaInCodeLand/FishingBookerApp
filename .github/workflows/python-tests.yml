@@ -13,17 +13,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y wget unzip
-        wget -q -O google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         sudo apt install -y ./google-chrome-stable_current_amd64.deb
-
-    - name: Verify Chrome install
-      run: |
-        which google-chrome
-        google-chrome --version
-
-    - name: Find chrome binary location
-      run: |
-        find / -name google-chrome 2>/dev/null
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -44,6 +35,3 @@ jobs:
     - name: Run tests
       run: |
         pytest test_cases --html=report.html 
-
-
-
