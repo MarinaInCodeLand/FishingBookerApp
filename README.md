@@ -1,4 +1,4 @@
-# 🐟 QA Project – FishingBooker (Manual & Automated Testing)
+# 🐟 QA Project - FishingBooker (Manual & Automated Testing)
 
 **Author**: Marina Jakovljević  
 **Date**: June 2025  
