@@ -1,13 +1,13 @@
-import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import pytest
 
 @pytest.fixture()
 def setup():
     options = Options()
-    options.add_argument('--headless')  # za CI/CD
+    options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
 
@@ -16,3 +16,4 @@ def setup():
     driver.maximize_window()
     yield driver
     driver.quit()
+
