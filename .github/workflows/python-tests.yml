@@ -34,4 +34,5 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest test_cases --html=report.html jel to to
+        pytest test_cases --html=report.html 
+        
