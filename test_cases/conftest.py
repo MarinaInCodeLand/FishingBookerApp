@@ -12,7 +12,7 @@ def setup():
     chrome_options.add_argument("--disable-dev-shm-usage")
 
     driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager(version="137.0.7151.70").install()),
+        service=Service(ChromeDriverManager().install()),
         options=chrome_options
     )
 
